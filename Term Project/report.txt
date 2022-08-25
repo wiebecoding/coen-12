@@ -1,0 +1,41 @@
+Worst Case Big-O Runtime
+---------------------------
+Creation
+- #2: O(1)
+- #3: O(k) where k is the number of possible ages
+
+Destroy
+- #2: O(n) 
+- #3: O(n) based on freeing linked list items
+
+Search
+- #2: O(1) due to the array hash table system
+- #3age: O(N) based on the number of students could be inputed into the system and the fact that I am printing all of the options means that O(k) is not correct.
+- #3id: O(N) based on the number of students could be inputed into the system.
+
+Insertion
+- #2: O(1) due to the array hash table system
+- #3: O(n) due to linked list system. This could be optimized by inseriting at the front of the linked list, but would require for more changes in data. 
+
+Deletion
+- #2: O(1) due to the array hash table system
+- #3: O(n) based on the number of students could be inputed into the system
+
+MaxAgeGap
+- #3: O(k) where k is the number of possible ages
+
+Scenario #2:
+For the second scenario, I will be using a hash table system to search through the student IDs.
+Because of the high search frequency, the hash table provides an expected search time of O(1). 
+Because there is no requirement for max age gap, we don't have to worry about such an iteration.
+Another structure that could have been used would be a sorted array, but this does not have the ability 
+to know where the data is through the hashing function.
+
+Scenario #3:
+For the third scenario, I will be using a hask table chaining with singly linked lists. This allows
+the data structure to be variable in storage size because there is no need to change previously allocated
+memory. This also allows the MaxAgeGap funciton to occur in a simple way because they are ordered by age.
+Because I had to both search for age and ID, I knew that one of them was going to be disadvatages with the 
+O(n) runtime. Thus, I selected the id to have this downside so that the MaxAgeGap could be acheived.
+I could have done a BST with this implementation, but it would have required more data and a longer time to get
+MaxAgeGap.
